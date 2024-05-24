@@ -15,7 +15,9 @@ const corsOptions = {
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: ['https://bestdaycafe.netlify.app', 'http://localhost:5173'],
+}));
 
 // middleware
 app.use(bodyParser.json({ limit: '10mb' }));
