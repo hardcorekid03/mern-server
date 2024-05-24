@@ -10,7 +10,12 @@ const CoffeeMenu = require("./routes/CoffeeMenu");
 const app = express();
 
 // Enable CORS for all origins
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:5173',
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.use(cors(corsOptions));
 
 // middleware
 app.use(bodyParser.json({ limit: '10mb' }));
@@ -32,6 +37,7 @@ mongoose
     // listen for request
     app.listen(dbPort, () => {
       console.log("connected to database and listening on port", dbPort);
+      <h1>Hello World</h1>
     });
   })
   .catch((error) => {
