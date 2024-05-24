@@ -37,7 +37,6 @@ mongoose
     // listen for request
     app.listen(dbPort, () => {
       console.log("connected to database and listening on port", dbPort);
-      <h1>Hello World</h1>
     });
   })
   .catch((error) => {
