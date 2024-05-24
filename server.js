@@ -11,7 +11,7 @@ const app = express();
 
 // Enable CORS for all origins
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: ['https://bestdaycafe.netlify.app', 'http://localhost:5173'],
   optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
